@@ -61,12 +61,12 @@ const letterContent = {
     {
       word: "Edelweiss",
       message: "Edelweiss...A rare flower in the Alps — pure, delicate, and deeply cherished..just like this my love, you are the rarest flower in the garden of my heart. and I like watering this flower and keeping it happy and healthy,so that it can bloom and you can spread the happiness and the charm yoouu hold on yourself ..ALWAYS KEEP BLOOMING and BE HAPPY BABY.  ",
-      img:"https://i.ibb.co/Tq0Ky0vs/Whats-App-Image-2025-06-29-at-11-46-30-PM.jpg"
+      img:"https://github.com/daksh4561/desktop-tutorial/blob/main/WhatsApp%20Image%202025-06-29%20at%2011.46.30%20PM%20(1).jpeg?raw=true"
     },
     {
       word: "Euphrosyne",
       message: "goddess of joy and laughter..you know what harleen your laugh and your face when something unexpectedd happens..and that breath intake which you have at a sudden I JUST FUCKIN MISSSS THHHAAATTTTTTTTT...pleaseee i wanna meet you so curiouslyyy..I literally wanna hug you like anything..just come to delhi fasstt and i'll surprise you with many much things just come and i'll shower you with my loveeee..AlWAYS AT YOUR SERVICE MADAM AND GIVING YOU FLOWERS IS THE BEST PART OF MY LIFEE (see below--virtual flowers for youu)..I didn’t know that joy had a name, until I met you.",
-      img:"https://i.ibb.co/xtXDsYxp/Whats-App-Image-2025-06-29-at-11-51-15-PM.jpg"
+      img:"https://github.com/daksh4561/desktop-tutorial/blob/main/WhatsApp%20Image%202025-06-29%20at%2011.51.15%20PM%20(1).jpeg?raw=true"
     },
   ],
   N: [
