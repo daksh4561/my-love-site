@@ -10,18 +10,14 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import LetterPage from "./LetterPage";
 
-const letters = [
-  ..."HARLEEN",
-  " ",
-  ..."KAUR",
-];
+const letters = [..."HARLEEN", " ", ..."KAUR"];
 
 function AnimatedRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-     <Route path="/letter/:letter/:index" element={<LetterPage />} />
+        <Route path="/letter/:letter/:index" element={<LetterPage />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </AnimatePresence>
@@ -37,7 +33,7 @@ function SmoothFillTransition({ trigger, onComplete }) {
       const timeout = setTimeout(() => {
         setVisible(false);
         onComplete();
-      }, 1000); // faster transition
+      }, 1000);
       return () => clearTimeout(timeout);
     }
   }, [trigger, onComplete]);
@@ -70,16 +66,15 @@ function Home() {
   const [transitioning, setTransitioning] = useState(false);
   const navigate = useNavigate();
 
- const handleClick = (letter, index) => {
-  setClickedLetter({ letter, index });
-  setTransitioning(true);
-};
+  const handleClick = (letter, index) => {
+    setClickedLetter({ letter, index });
+    setTransitioning(true);
+  };
 
-const handleTransitionComplete = () => {
-  const { letter, index } = clickedLetter;
-  navigate(`/letter/${letter}/${index}`);
-};
-
+  const handleTransitionComplete = () => {
+    const { letter, index } = clickedLetter;
+    navigate(`/letter/${letter}/${index}`);
+  };
 
   return (
     <motion.div
@@ -93,32 +88,37 @@ const handleTransitionComplete = () => {
         onComplete={handleTransitionComplete}
       />
       <FloatingHeartsAndFlowers dense={true} />
-      <h1 style={styles.title3D}>hyy harleen..my honeybunch sugarplum cuppycakkeee !</h1>
+      <h1 style={styles.title3D}>
+        hyy harleen..my honeybunch sugarplum cuppycakkeee !
+      </h1>
       <p style={styles.welcomeMessage}>
-       Hey love,<br />
-        This little corner of the internet is just for you — a space filled with LOVE with every letter of your name and every memory that made us <em>US</em>.
-        As you float through each word,I have expressed myself in some beautiful words that I hope you like it and feel the same warmth, laughter, and love you’ve given me.
-       This isn't just a website...it's a Love Letter, made out across stars, petals, and pixels.
-       here explore the letters of your name by tapping and explore the adventure yourself loveyaaa!! 
-             </p>
+        Hey love,<br />
+        This little corner of the internet is just for you — a space filled
+        with LOVE with every letter of your name and every memory that made us{" "}
+        <em>US</em>. As you float through each word,I have expressed myself in
+        some beautiful words that I hope you like it and feel the same warmth,
+        laughter, and love you’ve given me. This isn't just a website...it's a
+        Love Letter, made out across stars, petals, and pixels. here explore
+        the letters of your name by tapping and explore the adventure yourself
+        loveyaaa!!
+      </p>
       <div style={styles.letterRow}>
-       {letters.map((letter, idx) => {
-  if (letter === " ") {
-    return <div key={idx} style={{ width: "30px" }} />;
-  }
-  return (
-    <motion.div
-      key={idx}
-      whileHover={{ rotateX: 15, rotateY: 15, scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      onClick={() => handleClick(letter, idx)}
-      style={styles.letterCard3D}
-    >
-      {letter}
-    </motion.div>
-  );
-})}
-
+        {letters.map((letter, idx) => {
+          if (letter === " ") {
+            return <div key={idx} style={{ width: "30px" }} />;
+          }
+          return (
+            <motion.div
+              key={idx}
+              whileHover={{ rotateX: 15, rotateY: 15, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => handleClick(letter, idx)}
+              style={styles.letterCard3D}
+            >
+              {letter}
+            </motion.div>
+          );
+        })}
       </div>
     </motion.div>
   );
@@ -180,6 +180,14 @@ function FloatingHeartsAndFlowers({ dense = false }) {
 export default function App() {
   return (
     <Router>
+      {/* 🎵 Local background song (autoplay & loop) */}
+      <audio
+        src="/unforgettable.mp3"
+        autoPlay
+        loop
+        controls={false}
+        style={{ display: "none" }}
+      />
       <AnimatedRoutes />
     </Router>
   );
@@ -207,7 +215,7 @@ const styles = {
     fontSize: "1.1rem",
     maxWidth: "700px",
     margin: "20px auto 40px",
-    color: "#80002a", // ← maroon color here
+    color: "#80002a",
     lineHeight: "1.8",
     textAlign: "center",
     padding: "0 10px",
